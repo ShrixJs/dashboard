@@ -1,0 +1,26 @@
+
+.left-sidebar {
+  @extend %flex-column;
+  align-items: center;
+  background-color: $bright-gray;
+  padding: $spacing-md;
+  border-radius: 10px;
+}
+
+.sidebar-title {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  padding: 0 $spacing-md $spacing-md $spacing-md;
+}
+
+.nav-controls, .options {
+  @extend %flex-column;
+  gap: $spacing-xl;
+
+  > li {
+    @extend %flex-row;
+    gap: $spacing-sm
+  }
+}
+

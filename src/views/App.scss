@@ -1,0 +1,6 @@
+.dashboard {
+  @extend %flex-row;
+  align-items: center;
+  gap: $spacing-xl;
+  margin: $spacing-md $spacing-sm;
+}

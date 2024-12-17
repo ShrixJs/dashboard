@@ -1,6 +1,80 @@
+//design system variables
 $light-orange: #fcefe2;
 $light-green: #effcef;
 $light-blue: #e6f5f9;
 $light-gray: #f4f6fa;
 $bright-gray: #f7f7f7;
 
+$spacing-xl: 40px;
+$spacing-md: 24px;
+$spacing-sm: 16px;
+$spacing-xs: 8px;
+
+// Fonts
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+//CSS reset
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, html, #root{
+  height: 100%;
+  width: 100%;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+// Placeholder classes
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+%flex-row {
+  display: flex;
+  flex-direction: row;
+}

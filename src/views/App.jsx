@@ -1,10 +1,12 @@
-import './App.css'
+import LeftSidebar from './common/LeftSidebar';
 
-function App() {
+import './App.scss';
 
-  return (
-    <div>Dashboard App</div>
-  );
-}
+const App = () => (
+    <section className="dashboard">
+      <LeftSidebar />
+      <main>Main Layout</main>
+    </section>
+);
 
 export default App
