@@ -1,26 +1,51 @@
 
 .left-sidebar {
   @extend %flex-column;
-  align-items: center;
-  background-color: $bright-gray;
-  padding: $spacing-md;
+  width: 256px;
+  padding: $size-md;
   border-radius: 10px;
+  background-color: $bright-gray;
 }
 
 .sidebar-title {
   display: flex;
   align-items: center;
-  gap: $spacing-xs;
-  padding: 0 $spacing-md $spacing-md $spacing-md;
+  gap: $size-xs;
+  margin-bottom: $size-sm;
+  border-bottom: 1px solid $border-color;
+}
+
+.sidebar-title h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.sidebar-title image {
+  width: 42px;
+}
+
+.nav-controls-label {
+  margin: $size-sm 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $secondary-font-color;
 }
 
 .nav-controls, .options {
   @extend %flex-column;
-  gap: $spacing-xl;
+  gap: $size-md;
 
   > li {
     @extend %flex-row;
-    gap: $spacing-sm
+    gap: $size-sm;
+    padding: $size-xs $size-xs;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: $secondary-font-color;
   }
 }
 
+.options {
+  margin-top: auto;
+}

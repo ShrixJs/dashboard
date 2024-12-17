@@ -1,0 +1,31 @@
+.finance-summary {
+  @extend %flex-row;
+  gap: $size-md;
+}
+
+.card {
+  @extend %flex-column;
+  flex: 1;
+  padding: $size-md;
+  border-radius: $size-xs;
+  color: $tretiery-font-color;
+  background-color: $dark-blue;
+}
+
+.card-title {
+  @extend %flex-row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carousel-container {
+  flex: 1; // remove later
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.financial-metrics {
+  flex: 1;
+}
+

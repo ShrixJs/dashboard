@@ -4,21 +4,17 @@ $light-green: #effcef;
 $light-blue: #e6f5f9;
 $light-gray: #f4f6fa;
 $bright-gray: #f7f7f7;
+$dark-blue: #081226;
+$border-color: #edf0f0;
+$secondary-font-color: #4a4a4a;
+$tretiery-font-color: #FFFFFF;
 
-$spacing-xl: 40px;
-$spacing-md: 24px;
-$spacing-sm: 16px;
-$spacing-xs: 8px;
+$size-xl: 32px;
+$size-md: 24px;
+$size-sm: 16px;
+$size-xs: 8px;
 
 // Fonts
-@font-face {
-  font-family: "Roboto";
-  src: url("../assets/fonts/Roboto-Regular.ttf");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
 @font-face {
   font-family: "Roboto";
   src: url("../assets/fonts/Roboto-Light.ttf");
@@ -29,8 +25,24 @@ $spacing-xs: 8px;
 
 @font-face {
   font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
   src: url("../assets/fonts/Roboto-Bold.ttf");
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }

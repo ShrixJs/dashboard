@@ -1,0 +1,5 @@
+.overview {
+  @extend %flex-column;
+  gap: $size-md;
+  width: 100%;
+}

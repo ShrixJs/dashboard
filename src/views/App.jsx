@@ -1,11 +1,12 @@
 import LeftSidebar from './common/LeftSidebar';
+import Overview from './pages/Overview';
 
 import './App.scss';
 
 const App = () => (
     <section className="dashboard">
       <LeftSidebar />
-      <main>Main Layout</main>
+      <Overview />
     </section>
 );
 

@@ -1,0 +1,25 @@
+.notifications-bar {
+  @extend %flex-row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: $size-md;
+  border-bottom: 1px solid $border-color;
+}
+
+.user-controls {
+  @extend %flex-row;
+  align-items: center;
+  gap: $size-sm;
+}
+
+.buttons {
+  @extend %flex-row;
+  gap: $size-sm;
+}
+
+.user {
+  @extend %flex-row;
+  gap: $size-xs;
+  align-items: center;
+}

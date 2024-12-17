@@ -54,12 +54,12 @@ const LeftSidebar = () => (
       <img src={logo} alt="dashboard logo" />
       <h4>grapeslab</h4>
     </div>
-    <p>Main Menu</p>
+    <h5 className='nav-controls-label'>Main Menu</h5>
     <ul className="nav-controls">
-        {NAV_PAGES.map((page) => <li key={page.title}><i className={`fa-solid ${page.icon}`} /><p>{page.title}</p></li>)}
+        {NAV_PAGES.map((page) => <li key={page.title}><i className={`fa-solid ${page.icon} fa-fw`} /><p>{page.title}</p></li>)}
     </ul>
     <ul className='options'>
-        {OPTIONS.map((option) => <li key={option.title}><i className={`fa-solid ${option.icon}`} /><p>{option.title}</p></li>)}
+        {OPTIONS.map((option) => <li key={option.title}><i className={`fa-solid ${option.icon} fa-fw`} /><p>{option.title}</p></li>)}
     </ul>
   </aside>
 );
