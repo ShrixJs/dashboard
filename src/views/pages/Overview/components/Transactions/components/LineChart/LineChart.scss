@@ -1,0 +1,20 @@
+.chart-container {
+  @extend %flex-column;
+  gap: $size-xs;
+}
+
+.dataset-toggle, .period-filter, .custom-filters {
+  @extend %flex-row;
+}
+
+.custom-filters {
+  justify-content: space-between;
+}
+
+.dataset-toggle {
+  gap: $size-sm;
+}
+
+.period-filter {
+  gap: $size-sm;
+}

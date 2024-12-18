@@ -1,5 +1,6 @@
 import FinanceSummary from './components/FinanceSummary';
-import NotificationsBar from './components/NotificationsBar';
+import NotificationsBar from '../../common/NotificationsBar';
+import Transcations from './components/Transactions';
 
 import './Overview.scss';
 
@@ -8,6 +9,7 @@ const Overview = () => {
     <main className='overview'>
       <NotificationsBar />
       <FinanceSummary />
+      <Transcations />
     </main>
   );
 }

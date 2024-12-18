@@ -1,13 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import eslint from 'vite-plugin-eslint';
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), eslint()],
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "/src/styles/global.scss";`,
+        additionalData: `@use "sass:list"; @import "/src/styles/global.scss";`,
       },
     },
   },

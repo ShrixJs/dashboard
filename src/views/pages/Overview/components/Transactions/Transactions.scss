@@ -1,0 +1,19 @@
+.transactions {
+  @extend %flex-row;
+  gap: 24px;
+}
+
+.transactions-left-side {
+  flex: 1;// check if this could be removed
+  @extend %flex-column;
+  gap: 24px;
+}
+
+.transactions-right-side {
+  flex: 1
+}
+
+.send-money-header {
+  @extend %flex-row;
+  justify-content: space-between;
+}

@@ -1,4 +1,4 @@
-import './styles/FinanceSummary.scss';
+import './FinanceSummary.scss';
 
 
 // Move to redux
@@ -25,6 +25,15 @@ const FINANCE_METRICS = [
   },
 ]
 
+const formatCurrency = (amount) => (
+  amount
+    .toLocaleString('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: amount % 1 === 0 ? 0 : 2
+    })
+    .replace('$', '$ ')
+);
 
 const FinanceSummary = () => {
   return (
@@ -43,8 +52,8 @@ const FinanceSummary = () => {
               <h5>{metric.type}</h5>
               <i className="fa-solid fa-arrow-trend-up" />
             </div>
-            <p className="amount">{metric.amount}</p>
-            <p>{`${metric.comparison} than last month`}</p>
+            <p className="amount">{formatCurrency(metric.amount)}</p>
+            <p>{`${(metric.comparison * 100).toFixed(1)}% than last month`}</p>
           </div>
         ))}
       </div>

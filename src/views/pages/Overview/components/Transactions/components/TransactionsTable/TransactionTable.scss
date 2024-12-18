@@ -1,0 +1,15 @@
+.transactions-table {
+  @extend %flex-column;
+  padding: $size-sm;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+}
+.transactions-header {
+  @extend %flex-row;
+  justify-content: space-between;
+}
+
+.transaction-filters {
+  @extend %flex-row;
+  gap: $size-sm;
+}
