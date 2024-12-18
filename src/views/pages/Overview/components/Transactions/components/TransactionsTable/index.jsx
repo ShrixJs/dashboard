@@ -10,6 +10,9 @@ const TransactionsTable = () => {
           <li><button>Oldest</button></li>
         </ul>
       </div>
+      <div className="transaction items">
+
+      </div>
     </div>
   );
 }

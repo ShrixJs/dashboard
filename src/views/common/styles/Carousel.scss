@@ -1,0 +1,17 @@
+.slick-slide div {
+  outline: none;
+}
+
+.custom-dot {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.slick-active .custom-dot {
+  width: 15px;
+  background: white;
+  border-radius: 4px;
+}

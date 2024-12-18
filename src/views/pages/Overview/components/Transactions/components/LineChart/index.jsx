@@ -44,7 +44,7 @@ const LineChart = () => {
 
   const options = {
     responsive: true,
-    maxWidth: 800,
+    maxWidth: 600,
     scales: {
       x: {
         grid: {

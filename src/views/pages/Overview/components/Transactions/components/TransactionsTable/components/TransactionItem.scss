@@ -1,0 +1,7 @@
+.transaction-item, .transaction-user-container, .transaction-details {
+  @extend %flex-row;
+}
+
+.transaction-user-info {
+  @extend %flex-column;
+}

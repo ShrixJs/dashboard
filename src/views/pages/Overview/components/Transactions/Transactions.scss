@@ -6,14 +6,37 @@
 .transactions-left-side {
   flex: 1;// check if this could be removed
   @extend %flex-column;
-  gap: 24px;
+  gap: $size-md;
+  max-width: 600px;
 }
 
 .transactions-right-side {
   flex: 1
 }
 
+.send-money {
+  @extend %flex-column;
+  gap: $size-sm;
+}
+
 .send-money-header {
   @extend %flex-row;
   justify-content: space-between;
+}
+
+.contacts {
+  @extend %flex-row;
+}
+
+.contacts .slick-slider {
+  width: 100%;
+}
+
+.contact {
+  @extend %flex-column;
+  align-items: center;
+  gap: $size-xs;
+  width: 83px;
+  padding: $size-sm;
+
 }

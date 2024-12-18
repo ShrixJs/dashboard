@@ -1,3 +1,5 @@
+import Carousel from '../../../../common/Carousel';
+import cardImg from '../../../../../assets/images/card-placeholder.png';
 import './FinanceSummary.scss';
 
 
@@ -36,6 +38,14 @@ const formatCurrency = (amount) => (
 );
 
 const FinanceSummary = () => {
+
+  const cardSlide = {
+    id: 'card',
+    component: <img src={cardImg} alt="credit-card" />,
+  }
+
+  const slides = Array(5).fill(cardSlide);
+
   return (
     <section className="finance-summary">
       <div className="card">
@@ -43,7 +53,9 @@ const FinanceSummary = () => {
           <h5>My Card</h5>
           <button>opts</button>
         </div>
-        <div className="carousel-container">Carousel Placeholder</div>
+        <div className="carousel-container">
+         <Carousel slides={slides} slidesToShow={1} dots />
+        </div>
       </div>
       <div className="financial-metrics">
         {FINANCE_METRICS.map((metric) => (

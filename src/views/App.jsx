@@ -1,12 +1,28 @@
+import { Route, Routes } from 'react-router-dom';
 import LeftSidebar from './common/LeftSidebar';
-import Overview from './pages/Overview';
+import routes from '../routes';
 
 import './App.scss';
+import GenericPage from './pages/GenericPage';
 
 const App = () => (
     <section className="dashboard">
       <LeftSidebar />
-      <Overview />
+      <Routes>
+        {
+          routes.map((route) => (
+            <Route
+              key={route.path}
+              path={route.path}
+              element={
+                route.path === '/'
+                  ? <route.component />
+                  : <GenericPage pageName={route.path.slice(1)} />
+                }
+            />
+          ))
+        }
+      </Routes>
     </section>
 );
 

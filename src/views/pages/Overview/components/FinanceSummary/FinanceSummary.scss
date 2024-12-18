@@ -10,7 +10,7 @@
   border-radius: $size-xs;
   color: $tretiery-font-color;
   background-color: $dark-blue;
-  max-width: 800px;
+  max-width: 600px;
 }
 
 .card-title {
@@ -24,6 +24,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.carousel-container .slick-slider {
+  width: 250px;
 }
 
 .financial-metrics {

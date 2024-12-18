@@ -1,7 +1,7 @@
 
 .left-sidebar {
   @extend %flex-column;
-  width: 256px;
+  min-width: 256px;
   padding: $size-md;
   border-radius: 10px;
   background-color: $bright-gray;
@@ -35,16 +35,24 @@
 .nav-controls, .options {
   @extend %flex-column;
   gap: $size-md;
+  color: $secondary-font-color;
 
-  > li {
+  > li, li > a {
     @extend %flex-row;
     gap: $size-sm;
-    padding: $size-xs $size-xs;
+    padding: $size-xxs;
     font-size: 0.9rem;
     font-weight: 500;
-    color: $secondary-font-color;
+    cursor: pointer;
+  }
+
+  > li.active {
+    background-color: $dark-blue;
+    color: $tretiery-font-color;
+    border-radius: 8px;
   }
 }
+
 
 .options {
   margin-top: auto;
