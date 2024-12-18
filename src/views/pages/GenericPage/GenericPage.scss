@@ -1,0 +1,9 @@
+.generic-page {
+  @extend %flex-column;
+  width: 100%;
+  gap: 50%;
+}
+
+.generic-page div {
+  align-self: center;
+}

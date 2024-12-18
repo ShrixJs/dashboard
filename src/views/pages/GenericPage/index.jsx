@@ -1,15 +1,15 @@
 import NotificationsBar from '../../common/NotificationsBar';
 
+import './GenericPage.scss';
+
 const GenericPage = ({ pageName }) => {
   return (
-    <>
+    <main className="generic-page">
       <NotificationsBar />
-      <main>
-        <div>
-          {pageName}
-        </div>
-      </main>
-    </>
+      <div>
+        {pageName}
+      </div>
+    </main>
   );
 }
 
