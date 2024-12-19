@@ -9,8 +9,8 @@ const NotificationsBar = () => {
       <h3>Dashboard</h3>
       <div className="user-controls">
         <div className="buttons">
-          <button>b1</button>
-          <button>b2</button>
+          <button><i className="fa-regular fa-envelope" /></button>
+          <button><i className="fa-regular fa-bell" /></button>
         </div>
         <div className="user">
           <img className="avatar" src={avatar} alt="avatar" />

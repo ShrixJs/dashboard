@@ -2,6 +2,52 @@
   @extend %flex-row;
 }
 
+.transaction-user-container {
+  gap: $size-sm;
+
+  img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .transaction-user-info {
   @extend %flex-column;
+  align-items: flex-start;
+  gap: $size-xs;
+}
+
+.transaction-user-name {
+  font-weight: 500;
+}
+
+.transaction-date {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.transaction-item {
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: $size-sm;
+  padding: 12px;
+  border-bottom: 1px solid $border-color;
+}
+
+.transaction-details {
+  gap: $size-xl;
+  align-items: center;
+}
+
+.transaction-amount {
+  max-width: 50px;
+  min-width: 50px;
+  text-align: center;
+}
+
+.transaction-settings {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }

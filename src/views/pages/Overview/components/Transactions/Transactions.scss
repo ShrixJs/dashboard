@@ -4,8 +4,8 @@
 }
 
 .transactions-left-side {
-  flex: 1;// check if this could be removed
   @extend %flex-column;
+  flex: 1;
   gap: $size-md;
   max-width: 600px;
 }
@@ -22,6 +22,14 @@
 .send-money-header {
   @extend %flex-row;
   justify-content: space-between;
+  align-items: center;
+}
+
+.add-contact {
+  padding: $size-xs;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  background-color: transparent;
 }
 
 .contacts {
@@ -35,8 +43,33 @@
 .contact {
   @extend %flex-column;
   align-items: center;
+  justify-content: center;
   gap: $size-xs;
-  width: 83px;
+  width: 80%;
+  max-height: 126px;
+  min-height: 126px;
   padding: $size-sm;
+  text-align: center;
+  border-radius: 8px;
 
+  &.gray {
+    background-color: $light-gray;
+  }
+
+  &.green {
+    background-color: $light-green;
+  }
+
+  &.yellow {
+    background-color: $light-orange;
+  }
+
+  &.blue {
+    background-color: $light-blue;
+  }
+}
+
+.contact img {
+  border-radius: 50%;
+  align-items: center;
 }

@@ -51,7 +51,7 @@ const FinanceSummary = () => {
       <div className="card">
         <div className="card-title">
           <h5>My Card</h5>
-          <button>opts</button>
+          <button><i className="fa-solid fa-ellipsis-vertical" /></button>
         </div>
         <div className="carousel-container">
          <Carousel slides={slides} slidesToShow={1} dots />
@@ -65,7 +65,7 @@ const FinanceSummary = () => {
               <i className="fa-solid fa-arrow-trend-up" />
             </div>
             <p className="amount">{formatCurrency(metric.amount)}</p>
-            <p>{`${(metric.comparison * 100).toFixed(1)}% than last month`}</p>
+            <p className="amount-info">{`${(metric.comparison * 100).toFixed(1)}% than last month`}</p>
           </div>
         ))}
       </div>

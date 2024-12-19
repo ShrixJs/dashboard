@@ -4,11 +4,11 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import './styles/Carousel.scss';
 
-const Carousel = ({ slides, slidesToShow, dots }) => {
+const Carousel = ({ slides, slidesToShow, dots, arrows = false }) => {
 
   const sliderSettings = {
     dots: dots,
-    arrows: false,
+    arrows: arrows,
     infinite: true,
     draggable: true,
     speed: 1000,

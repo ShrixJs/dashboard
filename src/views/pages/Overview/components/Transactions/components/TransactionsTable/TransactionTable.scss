@@ -3,13 +3,29 @@
   padding: $size-sm;
   border: 1px solid $border-color;
   border-radius: 8px;
+  overflow-x: hidden;
 }
 .transactions-header {
   @extend %flex-row;
   justify-content: space-between;
+  align-items: center;
+  padding: $size-md;
+  border-bottom: 2px solid $border-color;
 }
 
 .transaction-filters {
   @extend %flex-row;
   gap: $size-sm;
+}
+
+.transaction-filters li button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: $size-xs;
+  border-radius: 8px;
+
+  &.active {
+    border: 1px solid $border-color;
+  }
 }

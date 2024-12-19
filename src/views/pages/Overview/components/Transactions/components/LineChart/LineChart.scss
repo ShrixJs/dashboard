@@ -1,6 +1,9 @@
 .chart-container {
   @extend %flex-column;
   gap: $size-xs;
+  border: 2px solid $border-color;
+  padding: $size-sm;
+  border-radius: $size-sm;
 }
 
 .dataset-toggle, .period-filter, .custom-filters {
@@ -13,6 +16,22 @@
 
 .dataset-toggle {
   gap: $size-sm;
+}
+
+.dataset-toggle > li > button,
+.period-filter > li > button {
+  border-radius: $size-xs;
+  padding: $size-xs;
+  background: transparent;
+  border: none;
+
+  &.active {
+    border: 2px solid $border-color;
+  }
+}
+
+.period-filter > li > button {
+  min-width: 38px;
 }
 
 .period-filter {

@@ -1,7 +1,7 @@
 .dashboard {
   @extend %flex-row;
   gap: $size-xl;
+  min-height: 100%;
   margin: $size-md $size-sm;
-  height: 100%;
   font-family: Roboto;
 }

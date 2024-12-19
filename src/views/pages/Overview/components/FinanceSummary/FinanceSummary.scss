@@ -19,6 +19,17 @@
   align-items: center;
 }
 
+.card-title h5 {
+  font-size: 1.125rem;
+}
+
+.card-title button {
+  color: $tretiery-font-color;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
 .carousel-container {
   flex: 1; // remove later
   display: flex;
@@ -40,8 +51,8 @@
 
 .metric-card {
   @extend %flex-column;
-  gap: 16px;
-  padding: $size-sm;
+  gap: $size-sm;
+  padding: $size-xl;
   border-radius: $size-xs;
 
   $colors: $light-orange, $light-green, $light-blue, $light-gray;
@@ -56,4 +67,18 @@
 .metric-title {
   @extend %flex-row;
   justify-content: space-between;
+}
+
+.metric-title h5 {
+  font-size: 1rem;
+}
+
+.amount {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.amount-info {
+  font-size: 0.875rem;
+  color: $secondary-font-color;
 }

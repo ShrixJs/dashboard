@@ -16,10 +16,24 @@
 .buttons {
   @extend %flex-row;
   gap: $size-sm;
+
+  > button {
+    padding: $size-sm;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background-color: $bright-gray;
+    cursor: pointer;
+  }
 }
 
 .user {
   @extend %flex-row;
   gap: $size-xs;
   align-items: center;
+  font-size: 0.87rem;
+
+  > p {
+    font-weight: 500;
+  }
 }

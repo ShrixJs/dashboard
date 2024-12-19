@@ -1,21 +1,22 @@
-import avatar from '../../../../../../assets/images/avatar-placeholder.png';
+import './TransactionItem.scss';
 
+const TransactionItem = ({ name, date, icon, status, amount }) => {
+  const formattedDate = new Date(date).toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' });
 
-const TransactionItem = ({ name, date, status, amount }) => {
   return (
     <div className="transaction-item">
       <div className="transaction-user-container">
-        <img src={avatar} alt="user avatar" />
+        <img src={icon} alt="user avatar" />
         <div className="transaction-user-info">
-          <p>{date}</p>
-          <p>{name}</p>
+          <p className="transaction-user-name">{name}</p>
+          <p className="transaction-date">{formattedDate}</p>
         </div>
       </div>
       <div className="transaction-details">
-        <p>{status}</p>
-        <p>{amount}</p>
-        <button>
-        <i className="fa-solid fa-ellipsis-vertical" />
+        <p className="transaction-status">{status}</p>
+        <p className="transaction-amount">{amount}</p>
+        <button className="transaction-settings">
+          <i className="fa-solid fa-ellipsis-vertical" />
         </button>
       </div>
     </div>

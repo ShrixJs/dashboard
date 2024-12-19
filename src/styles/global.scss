@@ -61,6 +61,7 @@ $size-xxs: 4px;
 body, html, #root{
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
 }
 
 ol, ul {
