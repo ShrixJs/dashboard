@@ -22,8 +22,14 @@
     outline: none;
     border: none;
     border-radius: 8px;
-    background-color: $bright-gray;
+    background-color: $medium-gray;
     cursor: pointer;
+
+    &:hover {
+      background-color: $dark-blue;
+      color: $white;
+      transition: 0.2s linear;
+    }
   }
 }
 

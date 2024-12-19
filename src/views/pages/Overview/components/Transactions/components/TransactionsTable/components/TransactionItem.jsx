@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useDispatch } from 'react-redux';
+
+import { deleteUser } from '../../../../../../../../store/usersSlice';
+import { formatCurrency } from '../../../../../../../../helpers';
 
 import './TransactionItem.scss';
-import { useDispatch } from 'react-redux';
-import { deleteUser } from '../../../../../../../../store/usersSlice';
 
 const TransactionItem = ({ name, date, icon, status, amount, id }) => {
   const dispatch = useDispatch();
@@ -12,6 +14,22 @@ const TransactionItem = ({ name, date, icon, status, amount, id }) => {
   const handleDeleteUser = () => {
     dispatch(deleteUser(id));
   };
+
+  const contextMenuRef = useRef(null);
+
+  const handleClickOutside = (e) => {
+    if (!contextMenuRef?.current?.contains(e.target)) {
+      setShouldShowContextMenu(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className="transaction-item">
@@ -24,16 +42,18 @@ const TransactionItem = ({ name, date, icon, status, amount, id }) => {
       </div>
       <div className="transaction-details">
         <p className={`transaction-status-${status.toLowerCase()}`}>{status}</p>
-        <p className="transaction-amount">{amount}</p>
-        <button className="transaction-settings" onClick={() => setShouldShowContextMenu(!shouldShowContextMenu)}>
-          <i className="fa-solid fa-ellipsis-vertical" />
-          {
-            shouldShowContextMenu &&
-              <div className="action-menu">
-                <button onClick={handleDeleteUser}>Delete</button>
-              </div>
-          }
-        </button>
+        <div className="transaction-actions">
+          <p className="transaction-amount">{`${Math.random() > 0.5 ? '+' : '-'} ${formatCurrency(amount)}`}</p>
+          <button ref={contextMenuRef} className="transaction-settings" onClick={() => setShouldShowContextMenu(!shouldShowContextMenu)}>
+            <i className="fa-solid fa-ellipsis-vertical" />
+            {
+              shouldShowContextMenu &&
+                <div className="action-menu">
+                  <button onClick={handleDeleteUser}>Delete</button>
+                </div>
+            }
+          </button>
+        </div>
       </div>
     </div>
   );

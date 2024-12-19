@@ -8,7 +8,7 @@
   flex: 1;
   padding: $size-md;
   border-radius: $size-xs;
-  color: $tretiery-font-color;
+  color: $white;
   background-color: $dark-blue;
   max-width: 700px;
 }
@@ -24,7 +24,7 @@
 }
 
 .card-title button {
-  color: $tretiery-font-color;
+  color: $white;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -84,5 +84,5 @@
 
 .amount-info {
   font-size: 0.875rem;
-  color: $secondary-font-color;
+  color: $dark-gray;
 }

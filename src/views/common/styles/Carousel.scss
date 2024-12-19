@@ -5,13 +5,19 @@
 .custom-dot {
   width: 10px;
   height: 10px;
-  background-color: white;
+  background-color: $white;
+  opacity: .75;
   border-radius: 50%;
   transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .slick-active .custom-dot {
   width: 15px;
-  background: white;
   border-radius: 4px;
+  background-color: $white;
+  opacity: 1;
 }

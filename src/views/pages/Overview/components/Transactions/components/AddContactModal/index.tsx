@@ -1,19 +1,25 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux';
+
 import Modal from 'react-modal';
 
-import './AddContactModal.scss';
-import { useDispatch } from 'react-redux';
 import { addUser } from '../../../../../../../store/usersSlice';
+
+import './AddContactModal.scss';
 
 const AddContactModal = ({ isOpen, setIsOpen }) => {
   const dispatch = useDispatch();
   const [name, setName] = useState('');
 
+  const closeModal = () => {
+    setName('');
+    setIsOpen(false);
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(addUser(name));
-    setName('');
-    setIsOpen(false);
+    closeModal();
   }
 
   return (
@@ -27,14 +33,14 @@ const AddContactModal = ({ isOpen, setIsOpen }) => {
     >
       <div className="form-header">
         <h3>Add contact</h3>
-        <button className='close' onClick={() => setIsOpen(false)}>
-          <i className="fa-solid fa-xmark"></i>
+        <button className='close' onClick={closeModal}>
+          <i className="fa-solid fa-xmark" />
         </button>
       </div>
-      <form onSubmit={(e) => handleSubmit(e)} className="contact-form">
-        <label htmlFor="name">Name</label>
-        <input id="name" type="text" value={name} onChange={(e) => setName(e.target.value)}/>
-        <button type="submit" disabled={!name} className={name ? '' : 'not-allowed'}>Add</button>
+      <form onSubmit={handleSubmit} className="contact-form">
+        <label htmlFor="name">Name *</label>
+        <input id="name" type="text" placeholder="Please enter a name" value={name} onChange={(e) => setName(e.target.value)}/>
+        <button type="submit" disabled={!name}>Add</button>
       </form>
     </Modal>
   );

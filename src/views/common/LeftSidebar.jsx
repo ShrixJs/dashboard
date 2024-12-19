@@ -1,7 +1,8 @@
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../../assets/images/logo.png';
-import { NAV_PAGES, OPTIONS } from '../../configs';
 
+import { NAV_PAGES, OPTIONS } from '../../constants';
+
+import logo from '../../assets/images/logo.png';
 import './styles/LeftSidebar.scss';
 
 const LeftSidebar = () => {
@@ -14,9 +15,17 @@ const LeftSidebar = () => {
        <h4>grapeslab</h4>
      </div>
      <h5 className="nav-controls-label">Main Menu</h5>
-     <ul className="nav-controls">
-       {NAV_PAGES.map((page) => <li key={page.title} className={location.pathname === page.route ? 'active' : '' }><Link to={page.route}><i className={`fa-solid ${page.icon} fa-fw`} /><p>{page.title}</p></Link></li>)}
-     </ul>
+     <nav className="nav-controls">
+       {
+          NAV_PAGES.map((page) =>
+            <Link key={page.title} to={page.route}>
+              <div className={location.pathname === page.route ? 'active' : '' }>
+                <i className={`fa-solid ${page.icon} fa-fw`} />
+                <p>{page.title}</p>
+              </div>
+            </Link>
+      )}
+     </nav>
      <ul className="options">
        {OPTIONS.map((option) => <li key={option.title}><i className={`fa-solid ${option.icon} fa-fw`} /><p>{option.title}</p></li>)}
      </ul>

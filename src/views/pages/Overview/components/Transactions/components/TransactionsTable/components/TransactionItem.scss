@@ -3,6 +3,7 @@
 }
 
 .transaction-user-container {
+  flex: 1;
   gap: $size-sm;
 
   img {
@@ -36,14 +37,20 @@
 }
 
 .transaction-details {
-  gap: $size-xl;
+  flex: 1;
   align-items: center;
+  justify-content: space-between;
+}
+
+.transaction-actions {
+  @extend %flex-row;
+  gap:32px;
+  padding-right: $size-xs;
 }
 
 .transaction-amount {
-  max-width: 50px;
-  min-width: 50px;
   text-align: center;
+  white-space: nowrap;
 }
 
 .transaction-settings {
@@ -58,7 +65,7 @@
   left: -60px;
   padding: $size-xs;
   border-radius: 4px;
-  background-color: $bright-gray;
+  background-color: $medium-gray;
 
   button {
     background-color: transparent;

@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -12,7 +14,6 @@ import {
 import { Line } from 'react-chartjs-2';
 
 import './LineChart.scss';
-import { useState } from 'react';
 
 ChartJS.register(
   CategoryScale,
@@ -27,6 +28,7 @@ ChartJS.register(
 const options = {
   responsive: true,
   maxWidth: 700,
+  tension: 0.5,
   scales: {
     x: {
       grid: {

@@ -1,5 +1,5 @@
-import './styles/NotificationsBar.scss';
 import avatar from '../../assets/images/avatar-placeholder.png';
+import './styles/NotificationsBar.scss';
 
 const NotificationsBar = () => {
   return (

@@ -4,7 +4,7 @@
   min-width: 320px;
   padding: $size-md;
   border-radius: 10px;
-  background-color: $bright-gray;
+  background-color: $medium-gray;
 }
 
 .sidebar-title {
@@ -29,30 +29,31 @@
   font-size: 0.8rem;
   font-weight: 500;
   text-transform: uppercase;
-  color: $secondary-font-color;
+  color: $dark-gray;
 }
 
 .nav-controls, .options {
   @extend %flex-column;
   gap: $size-md;
-  color: $secondary-font-color;
+  color: $dark-gray;
 
-  > li, li > a {
+  > li,  > a > div {
     @extend %flex-row;
+    align-items: center;
     gap: $size-sm;
-    padding: $size-xxs;
+    padding: $size-sm;
     font-size: 0.9rem;
     font-weight: 500;
     cursor: pointer;
   }
 
-  > li.active {
+  > li.active, li:hover, > a div.active, a:hover {
     background-color: $dark-blue;
-    color: $tretiery-font-color;
+    color: $white;
     border-radius: 8px;
+    transition: 0.2s linear;
   }
 }
-
 
 .options {
   margin-top: auto;

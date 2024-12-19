@@ -1,18 +1,9 @@
 import Carousel from '../../../../common/Carousel';
+import { FINANCE_METRICS } from '../../../../../constants';
+import { formatCurrency } from '../../../../../helpers';
+
 import cardImg from '../../../../../assets/images/card-placeholder.png';
-import { FINANCE_METRICS } from '../../../../../configs';
-
 import './FinanceSummary.scss';
-
-const formatCurrency = (amount) => (
-  amount
-    .toLocaleString('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: amount % 1 === 0 ? 0 : 2
-    })
-    .replace('$', '$ ')
-);
 
 const FinanceSummary = () => {
 

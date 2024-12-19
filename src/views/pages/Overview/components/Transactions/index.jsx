@@ -54,7 +54,7 @@ const Transcations = () => {
         <div className="send-money">
           <div className="send-money-header">
             <h3>Send Money To</h3>
-            <button className="add-contact" onClick={() => setIsModalOpen(!isModalOpen)}>+ Add new</button>
+            <button className="add-contact" onClick={() => setIsModalOpen(!isModalOpen)}><i className="fa-solid fa-plus" />Add new</button>
           </div>
           <div className="contacts">
             <Carousel slides={slides} slidesToShow={5} dots={false} />

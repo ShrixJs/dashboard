@@ -73,3 +73,5 @@ export const OPTIONS = [
   icon: 'fa-arrow-right-from-bracket',
 }
 ];
+
+export const STATUSES = ['Completed', 'Pending'];

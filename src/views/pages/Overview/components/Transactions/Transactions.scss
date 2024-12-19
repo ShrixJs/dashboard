@@ -26,11 +26,19 @@
 }
 
 .add-contact {
+  @extend %flex-row;
+  align-items: center;
+  gap: $size-xxs;
   padding: $size-xs;
   border: 1px solid $border-color;
   border-radius: 8px;
   background-color: transparent;
   cursor: pointer;
+  transition: 0.2s linear;
+
+  &:hover {
+    border-color: $dark-gray;
+  }
 }
 
 .contacts {

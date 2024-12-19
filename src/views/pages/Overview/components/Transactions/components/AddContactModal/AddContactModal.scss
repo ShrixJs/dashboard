@@ -1,4 +1,9 @@
 .modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(0 0 0 / 0.25);
 }
 
@@ -7,15 +12,13 @@
   width: 500px;
   height: 300px;
   padding: $size-md;
-  margin: auto;
-  inset: 40px;
-  position: absolute;
-  overflow: auto;
   border: 1px solid $border-color;
-  background-color: $bright-gray;
+  background-color: $medium-gray;
   border-radius: 4px;
   font-family: Roboto;
   outline: none;
+  background-color: $white;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
 
 .modal .form-header {
@@ -46,18 +49,24 @@
   button {
     padding: $size-xs;
     width: 70px;
-    background-color: $purple;
-    color: $tretiery-font-color;
+    color: $dark-blue;
+    background-color: transparent;
+    border: 2px solid $border-color;
     border-radius: 4px;
-    border: none;
+    opacity: 1;
     cursor: pointer;
 
-    &.not-allowed {
-      background-color: $bright-gray;
+    &:hover {
+      border-color: $dark-gray;
+    }
+
+    &:disabled {
+      opacity: 0.5;
       color: $dark-blue;
-      border: 1px solid $border-color;
+      border: 2px solid $border-color;
       cursor: not-allowed;
     }
+
   }
 }
 

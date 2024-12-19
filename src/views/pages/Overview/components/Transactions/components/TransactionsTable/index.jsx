@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
+import Scrollbars from 'react-custom-scrollbars-2';
 
 import {
   selectUsers,
@@ -9,8 +10,8 @@ import {
 
 import TransactionItem from './components/TransactionItem';
 
+import { STATUSES } from '../../../../../../../constants';
 import './TransactionTable.scss';
-import Scrollbars from 'react-custom-scrollbars-2';
 
 const TransactionsTable = () => {
   const [sortBy, setSortBy] = useState('newest');
@@ -46,8 +47,8 @@ const TransactionsTable = () => {
                   date={user.registered}
                   icon={user.icon}
                   id={user.id}
-                  status={'Completed'}
-                  amount={(Math.random() * 100 + 1).toFixed(2)}
+                  status={STATUSES[Math.round(Math.random())]}
+                  amount={(Math.round(Math.random() * 5000 + 1))}
                   />))
                 }
               </Scrollbars>

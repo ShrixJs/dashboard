@@ -2,6 +2,6 @@
   @extend %flex-row;
   gap: $size-xl;
   min-height: 100%;
-  margin: $size-md $size-sm;
+  padding: $size-md $size-sm;
   font-family: Roboto;
 }

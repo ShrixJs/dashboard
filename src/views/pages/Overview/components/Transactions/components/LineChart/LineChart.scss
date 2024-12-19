@@ -23,12 +23,21 @@
   border-radius: $size-xs;
   padding: $size-xs;
   background: transparent;
-  border: none;
+  border: 2px solid transparent;
   cursor: pointer;
+  transition: 0.2s linear;
 
   &.active {
     border: 2px solid $border-color;
   }
+}
+
+.dataset-toggle > li > button:hover {
+  border-color: $dark-gray;
+}
+
+.period-filter > li > button:hover {
+  border: 2px solid $border-color;
 }
 
 .period-filter > li > button {
