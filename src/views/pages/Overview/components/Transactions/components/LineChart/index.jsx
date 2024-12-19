@@ -28,7 +28,7 @@ ChartJS.register(
 
 const options = {
   responsive: true,
-  maxWidth: 600,
+  maxWidth: 700,
   scales: {
     x: {
       grid: {

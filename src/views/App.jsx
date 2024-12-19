@@ -1,9 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
+
 import LeftSidebar from './common/LeftSidebar';
+import GenericPage from './pages/GenericPage';
+
 import routes from '../routes';
 
 import './App.scss';
-import GenericPage from './pages/GenericPage';
 
 const App = () => (
   <section className="dashboard">

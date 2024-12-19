@@ -29,3 +29,10 @@
     border: 1px solid $border-color;
   }
 }
+
+.transaction-items:has(p.no-data) {
+  @extend %flex-row;
+  min-height: 500px;
+  justify-content: center;
+  align-items: center;
+}

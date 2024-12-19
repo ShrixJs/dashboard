@@ -1,7 +1,12 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
-import { selectUsers, selectUsersLoading } from '../../../../../../../store/usersSlice';
+import {
+  selectUsers,
+  selectUsersError,
+  selectUsersLoading,
+} from '../../../../../../../store/usersSlice';
+
 import TransactionItem from './components/TransactionItem';
 
 import './TransactionTable.scss';
@@ -11,6 +16,7 @@ const TransactionsTable = () => {
   const [sortBy, setSortBy] = useState('newest');
   const users = useSelector(selectUsers);
   const isLoading = useSelector(selectUsersLoading);
+  const hasError = useSelector(selectUsersError);
 
   const sortedUsers = users.slice().sort((a, b) => {
     if (sortBy === 'oldest') return new Date(a.registered) - new Date(b.registered);
@@ -27,7 +33,7 @@ const TransactionsTable = () => {
           <li><button className={sortBy === 'oldest' && 'active'} type="button" onClick={() => setSortBy('oldest')}>Oldest</button></li>
         </ul>
       </div>
-      <div className="transaction items">
+      <div className="transaction-items">
         {
           !isLoading &&
             (
@@ -45,6 +51,9 @@ const TransactionsTable = () => {
                 }
               </Scrollbars>
             )
+        }
+        {
+          (hasError || sortedUsers === 0) &&  <p className="no-data">No transaction data available</p>
         }
       </div>
     </div>

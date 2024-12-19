@@ -9,23 +9,32 @@ import Carousel from '../../../../common/Carousel';
 
 import './Transactions.scss';
 
-const renderContact = (name, icon, color) => (
-  <div className={`contact ${color}`}>
-    <img src={icon} alt="contact avatar" />
-    <p>{name}</p>
-  </div>
-);
+const COLORS = [
+  '#fcefe2',
+  '#effcef',
+  '#e6f5f9',
+  '#f4f6f9'
+];
+
+const renderContact = (name, icon, index) => {
+  const colorIndex = (index % 4);
+
+  return (
+    <div className="contact" style={{ backgroundColor: COLORS[colorIndex] }}>
+      <img src={icon} alt="contact avatar" />
+      <p>{name}</p>
+    </div>
+  );
+};
 
 const Transcations = () => {
   const dispatch = useDispatch();
   const users = useSelector(selectUsers);
-  const colors = ['green', 'yellow', 'blue', 'gray'];
-  const slides = users.slice().map((user) => {
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  const slides = users.slice().map((user, i) => {
     return (
       {
         id: user.name,
-        component: renderContact(user.name, user.icon, randomColor)
+        component: renderContact(user.name, user.icon, i)
       }
     );
   });
@@ -44,7 +53,7 @@ const Transcations = () => {
             <button className="add-contact">+ Add new</button>
           </div>
           <div className="contacts">
-            <Carousel slides={slides} slidesToShow={4} dots={false} arrows={true} />
+            <Carousel slides={slides} slidesToShow={5} dots={false} centered />
           </div>
         </div>
       </div>

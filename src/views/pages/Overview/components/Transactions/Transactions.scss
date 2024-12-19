@@ -7,7 +7,7 @@
   @extend %flex-column;
   flex: 1;
   gap: $size-md;
-  max-width: 600px;
+  max-width: 700px;
 }
 
 .transactions-right-side {
@@ -34,10 +34,19 @@
 
 .contacts {
   @extend %flex-row;
-}
+  justify-content: center;
 
-.contacts .slick-slider {
-  width: 100%;
+  .slick-slider {
+    width: 90%;
+  }
+
+  .slick-slider .slick-prev:before, .slick-next:before  {
+    color: $dark-blue;
+  }
+
+  .slick-next {
+    right: -5px;
+  }
 }
 
 .contact {
@@ -51,22 +60,6 @@
   padding: $size-sm;
   text-align: center;
   border-radius: 8px;
-
-  &.gray {
-    background-color: $light-gray;
-  }
-
-  &.green {
-    background-color: $light-green;
-  }
-
-  &.yellow {
-    background-color: $light-orange;
-  }
-
-  &.blue {
-    background-color: $light-blue;
-  }
 }
 
 .contact img {

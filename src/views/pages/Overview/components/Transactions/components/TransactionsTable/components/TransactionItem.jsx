@@ -13,7 +13,7 @@ const TransactionItem = ({ name, date, icon, status, amount }) => {
         </div>
       </div>
       <div className="transaction-details">
-        <p className="transaction-status">{status}</p>
+        <p className={`transaction-status-${status.toLowerCase()}`}>{status}</p>
         <p className="transaction-amount">{amount}</p>
         <button className="transaction-settings">
           <i className="fa-solid fa-ellipsis-vertical" />

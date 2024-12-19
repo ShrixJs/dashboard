@@ -51,3 +51,18 @@
   border: none;
   cursor: pointer;
 }
+
+.transaction-status-completed,
+.transaction-status-pending {
+  padding: $size-xs;
+  border-radius: 10px;
+}
+
+.transaction-status-completed {
+  background-color: $light-green;
+}
+
+.transaction-status-pending {
+  background-color: $light-blue;
+
+}
