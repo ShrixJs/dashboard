@@ -20,7 +20,7 @@ const Carousel = ({ slides, slidesToShow, dots }) => {
 
   return (
     <Slider {...sliderSettings}>
-      {slides.map((slide, i) => <div key={`${slide.id}-${i}`}>{slide.component}</div>)}
+      {slides?.map((slide, i) => <div key={`${slide.id}-${i}`}>{slide.component}</div>)}
     </Slider>
   );
 };

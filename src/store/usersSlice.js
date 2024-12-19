@@ -10,7 +10,8 @@ export const fetchUsersThunk = createAsyncThunk(
 );
 
 const initialState = {
-  data: [],
+  results: [],
+  contacts: [],
   isLoading: false,
   error: null,
 };
@@ -18,7 +19,14 @@ const initialState = {
 const usersSlice = createSlice({
   name: 'users',
   initialState,
-  reducers: {},
+  reducers: {
+    addUser: (state, action) => {
+      state.contacts.push({ name: action.payload, avatar: 'default', registered: Date.now() });
+    },
+    deleteUser: (state, action) => {
+      state.results = state.results.filter((user) => user.id !== action.payload);
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchUsersThunk.pending, (state) => {
@@ -27,7 +35,8 @@ const usersSlice = createSlice({
       })
       .addCase(fetchUsersThunk.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.data = action.payload;
+        state.results = action.payload;
+        state.contacts = action.payload;
       })
       .addCase(fetchUsersThunk.rejected, (state, action) => {
         state.isLoading = false;
@@ -36,8 +45,11 @@ const usersSlice = createSlice({
   },
 });
 
-export const selectUsers = (state) => state.users.data;
+export const selectUsers = (state) => state.users.results;
+export const selectContacts = (state) => state.users.contacts;
 export const selectUsersLoading = (state) => state.users.isLoading;
 export const selectUsersError = (state) => state.users.error;
+
+export const { addUser, deleteUser } = usersSlice.actions;
 
 export default usersSlice.reducer;

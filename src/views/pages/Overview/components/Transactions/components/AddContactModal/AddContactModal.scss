@@ -1,0 +1,63 @@
+.modal-overlay {
+  background-color: rgb(0 0 0 / 0.25);
+}
+
+.modal {
+  @extend %flex-column;
+  width: 500px;
+  height: 300px;
+  padding: $size-md;
+  margin: auto;
+  inset: 40px;
+  position: absolute;
+  overflow: auto;
+  border: 1px solid $border-color;
+  background-color: $bright-gray;
+  border-radius: 4px;
+  font-family: Roboto;
+  outline: none;
+}
+
+.modal .form-header {
+  @extend %flex-row;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
+.modal .contact-form {
+  @extend %flex-column;
+  align-items: center;
+  gap: $size-sm;
+  margin: auto;
+
+  input {
+    padding: $size-xs;
+    border-radius: 4px;
+    border: 1px solid $border-color;
+    outline: none;
+  }
+
+  button {
+    padding: $size-xs;
+    width: 70px;
+    background-color: $purple;
+    color: $tretiery-font-color;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+
+    &.not-allowed {
+      background-color: $bright-gray;
+      color: $dark-blue;
+      border: 1px solid $border-color;
+      cursor: not-allowed;
+    }
+  }
+}
+

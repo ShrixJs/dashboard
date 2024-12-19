@@ -1,31 +1,8 @@
 import Carousel from '../../../../common/Carousel';
 import cardImg from '../../../../../assets/images/card-placeholder.png';
+import { FINANCE_METRICS } from '../../../../../configs';
+
 import './FinanceSummary.scss';
-
-
-// Move to redux
-const FINANCE_METRICS = [
-  {
-    type: 'Balance',
-    amount: 97450,
-    comparison: 0.088,
-  },
-  {
-    type: 'Spending',
-    amount: 44900,
-    comparison: 0.071,
-  },
-  {
-    type: 'Investment',
-    amount: 38160,
-    comparison: 0.079,
-  },
-  {
-    type: 'Profit',
-    amount: 32500,
-    comparison: 0.034,
-  },
-];
 
 const formatCurrency = (amount) => (
   amount

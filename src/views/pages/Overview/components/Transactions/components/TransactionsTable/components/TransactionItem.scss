@@ -50,6 +50,22 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  position: relative;
+}
+
+.action-menu {
+  position: absolute;
+  left: -60px;
+  padding: $size-xs;
+  border-radius: 4px;
+  background-color: $bright-gray;
+
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
 }
 
 .transaction-status-completed,

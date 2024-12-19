@@ -1,8 +1,6 @@
 import './styles/NotificationsBar.scss';
 import avatar from '../../assets/images/avatar-placeholder.png';
 
-// fix avatar bg
-
 const NotificationsBar = () => {
   return (
     <div className="notifications-bar">

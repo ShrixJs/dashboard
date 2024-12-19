@@ -16,6 +16,7 @@
     "react-chartjs-2": "^5.2.0",
     "react-custom-scrollbars-2": "^4.5.0",
     "react-dom": "^18.3.1",
+    "react-modal": "^3.16.3",
     "react-redux": "^9.2.0",
     "react-router-dom": "^6.28.0",
     "react-slick": "^0.30.3",

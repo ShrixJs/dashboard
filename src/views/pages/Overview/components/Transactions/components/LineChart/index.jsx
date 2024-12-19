@@ -24,8 +24,6 @@ ChartJS.register(
   Legend
 );
 
-
-
 const options = {
   responsive: true,
   maxWidth: 700,
@@ -108,7 +106,7 @@ const LineChart = () => {
         <ul className="dataset-toggle">
           <li>
             <button
-              className={datasetVisibilityStatus.expenses && 'active'}
+              className={datasetVisibilityStatus.expenses ? 'active' : ''}
               type="button"
               onClick={() => handleToggle('expenses')}
             >
@@ -117,7 +115,7 @@ const LineChart = () => {
           </li>
           <li>
             <button
-              className={datasetVisibilityStatus.income && 'active'}
+              className={datasetVisibilityStatus.income ? 'active' : ''}
               type="button"
               onClick={() => handleToggle('income')}
             >

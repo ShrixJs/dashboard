@@ -1,60 +1,8 @@
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
+import { NAV_PAGES, OPTIONS } from '../../configs';
 
 import './styles/LeftSidebar.scss';
-
-const NAV_PAGES = [
-    {
-      title: 'Overview',
-      icon: 'fa-table',
-      route: '/'
-    },
-    {
-      title: 'Message',
-      icon: 'fa-envelope',
-      route: '/message',
-    },
-    {
-      title: 'Analytics',
-      icon: 'fa-chart-line',
-      route: '/analytics',
-    },
-    {
-      title: 'Payment',
-      icon: 'fa-credit-card',
-      route: '/payment',
-    },
-    {
-      title: 'Transaction',
-      icon: 'fa-arrow-right-arrow-left',
-      route: '/transaction'
-    },
-    {
-      title: 'My Wallet',
-      icon: 'fa-wallet',
-      route: '/my-wallet'
-    },
-    {
-      title: 'Profile',
-      icon: 'fa-user',
-      route: '/profile',
-    }
-];
-
-const OPTIONS = [
-  {
-    title: 'Support',
-    icon: 'fa-headset',
-  },
-  {
-    title: 'Settings',
-    icon: 'fa-gear',
-  },
-  {
-    title: 'Log out',
-    icon: 'fa-arrow-right-from-bracket',
-  }
-];
 
 const LeftSidebar = () => {
   const location = useLocation();

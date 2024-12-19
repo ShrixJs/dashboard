@@ -8,6 +8,7 @@ export const fetchUsers = async (amount) => {
       name: `${result.name.first} ${result.name.last}`,
       icon: result.picture.thumbnail,
       registered: result.registered.date,
+      id: crypto.randomUUID(),
      }));
 
     return filteredDetails;

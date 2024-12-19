@@ -29,8 +29,8 @@ const TransactionsTable = () => {
       <div className="transactions-header">
         <h3>Transactions</h3>
         <ul className="transaction-filters">
-          <li><button className={sortBy === 'newest' && 'active'} type="button" onClick={() => setSortBy('newest')}>Newest</button></li>
-          <li><button className={sortBy === 'oldest' && 'active'} type="button" onClick={() => setSortBy('oldest')}>Oldest</button></li>
+          <li><button className={sortBy === 'newest' ? 'active' : ''} type="button" onClick={() => setSortBy('newest')}>Newest</button></li>
+          <li><button className={sortBy === 'oldest' ? 'active' : ''} type="button" onClick={() => setSortBy('oldest')}>Oldest</button></li>
         </ul>
       </div>
       <div className="transaction-items">
@@ -45,6 +45,7 @@ const TransactionsTable = () => {
                   name={user.name}
                   date={user.registered}
                   icon={user.icon}
+                  id={user.id}
                   status={'Completed'}
                   amount={(Math.random() * 100 + 1).toFixed(2)}
                   />))
