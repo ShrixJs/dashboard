@@ -19,10 +19,10 @@ const Carousel = ({ slides, slidesToShow, dots, arrows = false }) => {
   };
 
   return (
-      <Slider {...sliderSettings}>
-        {slides.map((slide, i) => <div key={`${slide.id}-${i}`}>{slide.component}</div>)}
-      </Slider>
+    <Slider {...sliderSettings}>
+      {slides.map((slide, i) => <div key={`${slide.id}-${i}`}>{slide.component}</div>)}
+    </Slider>
   );
-}
+};
 
 export default Carousel;

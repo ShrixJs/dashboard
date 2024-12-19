@@ -21,6 +21,6 @@ const TransactionItem = ({ name, date, icon, status, amount }) => {
       </div>
     </div>
   );
-}
+};
 
 export default TransactionItem;

@@ -14,7 +14,7 @@ const renderContact = (name, icon, color) => (
     <img src={icon} alt="contact avatar" />
     <p>{name}</p>
   </div>
-)
+);
 
 const Transcations = () => {
   const dispatch = useDispatch();
@@ -44,7 +44,7 @@ const Transcations = () => {
             <button className="add-contact">+ Add new</button>
           </div>
           <div className="contacts">
-              <Carousel slides={slides} slidesToShow={4} dots={false} arrows={true} />
+            <Carousel slides={slides} slidesToShow={4} dots={false} arrows={true} />
           </div>
         </div>
       </div>
@@ -53,6 +53,6 @@ const Transcations = () => {
       </div>
     </section>
   );
-}
+};
 
 export default Transcations;

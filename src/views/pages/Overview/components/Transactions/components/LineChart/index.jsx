@@ -66,7 +66,7 @@ const labels = {
   day: ['9am', '12pm', '3pm', '6pm'],
   week: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
   month: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
-}
+};
 
 const periods = [
   { label: 'All', value: 'all' },
@@ -126,8 +126,8 @@ const LineChart = () => {
           </li>
         </ul>
         <ul className="period-filter">
-            {periods.map((period) => (
-              <li key={period.value}>
+          {periods.map((period) => (
+            <li key={period.value}>
               <button
                 type="button"
                 onClick={() => setSelectedPeriod(period.value)}
@@ -136,12 +136,12 @@ const LineChart = () => {
                 {period.label}
               </button>
             </li>
-            ))}
+          ))}
         </ul>
       </div>
       <Line data={data} options={options} />
     </div>
   );
-}
+};
 
 export default LineChart;

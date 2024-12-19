@@ -12,6 +12,6 @@ const Overview = () => {
       <Transcations />
     </main>
   );
-}
+};
 
 export default Overview;

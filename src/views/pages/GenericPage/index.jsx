@@ -11,6 +11,6 @@ const GenericPage = ({ pageName }) => {
       </div>
     </main>
   );
-}
+};
 
 export default GenericPage;

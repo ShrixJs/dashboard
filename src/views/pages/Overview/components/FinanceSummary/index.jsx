@@ -25,7 +25,7 @@ const FINANCE_METRICS = [
     amount: 32500,
     comparison: 0.034,
   },
-]
+];
 
 const formatCurrency = (amount) => (
   amount
@@ -42,7 +42,7 @@ const FinanceSummary = () => {
   const cardSlide = {
     id: 'card',
     component: <img src={cardImg} alt="credit-card" />,
-  }
+  };
 
   const slides = Array(5).fill(cardSlide);
 
@@ -54,7 +54,7 @@ const FinanceSummary = () => {
           <button><i className="fa-solid fa-ellipsis-vertical" /></button>
         </div>
         <div className="carousel-container">
-         <Carousel slides={slides} slidesToShow={1} dots />
+          <Carousel slides={slides} slidesToShow={1} dots />
         </div>
       </div>
       <div className="financial-metrics">
@@ -71,6 +71,6 @@ const FinanceSummary = () => {
       </div>
     </section>
   );
-}
+};
 
 export default FinanceSummary;

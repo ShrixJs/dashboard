@@ -28,7 +28,8 @@ const TransactionsTable = () => {
         </ul>
       </div>
       <div className="transaction items">
-          { !isLoading &&
+        {
+          !isLoading &&
             (
               <Scrollbars autoHide style={{ width: '100%', height: 500 }}>
                 {
@@ -44,10 +45,10 @@ const TransactionsTable = () => {
                 }
               </Scrollbars>
             )
-          }
+        }
       </div>
     </div>
   );
-}
+};
 
 export default TransactionsTable;

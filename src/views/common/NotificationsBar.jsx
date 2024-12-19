@@ -20,6 +20,6 @@ const NotificationsBar = () => {
       </div>
     </div>
   );
-}
+};
 
 export default NotificationsBar;

@@ -13,7 +13,7 @@ const initialState = {
   data: [],
   isLoading: false,
   error: null,
-}
+};
 
 const usersSlice = createSlice({
   name: 'users',
